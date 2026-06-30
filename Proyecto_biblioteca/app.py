@@ -55,7 +55,7 @@ def agregar_libro():
         return jsonify({'error': 'Faltan campos requeridos'}), 400
     nuevo_id = max(libros.keys()) + 1
 
-    libro = [nuevo_id] = {
+    libro[nuevo_id] = {
         'id': nuevo_id,
         'titulo': datos['titulo'],
         'autor': datos['autor'],
